@@ -37,8 +37,8 @@ export function prepareSelection(cm, primary = true) {
 // Draws a cursor for the given range
 export function drawSelectionCursor(cm, head, output) {
   let pos = cursorCoords(cm, head, "div", null, null, !cm.options.singleCursorHeightPerLine)
-
-  let cursor = output.appendChild(elt("div", "\u00a0", "CodeMirror-cursor"))
+  //\u00a0
+  let cursor = output.appendChild(elt("div", "", "CodeMirror-cursor"))
   cursor.style.left = pos.left + "px"
   cursor.style.top = pos.top + "px"
   cursor.style.height = Math.max(0, pos.bottom - pos.top) * cm.options.cursorHeight + "px"

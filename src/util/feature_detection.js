@@ -18,9 +18,10 @@ export function zeroWidthElement(measure) {
     if (measure.firstChild.offsetHeight != 0)
       zwspSupported = test.offsetWidth <= 1 && test.offsetHeight > 2 && !(ie && ie_version < 8)
   }
-  let node = zwspSupported ? elt("span", "\u200b") :
+  let node = elt("span", "")
+/*  let node = zwspSupported ? elt("span", "\u200b") :
     elt("span", "\u00a0", null, "display: inline-block; width: 1px; margin-right: -1px")
-  node.setAttribute("cm-text", "")
+  node.setAttribute("cm-text", "")*/
   return node
 }
 
