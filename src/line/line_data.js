@@ -68,7 +68,7 @@ export function buildLineContent(cm, lineView) {
   let builder = {pre: eltP("pre", [content], "CodeMirror-line"), content: content,
                  col: 0, pos: 0, cm: cm,
                  trailingSpace: false,
-                 splitSpaces: cm.getOption("lineWrapping")}
+                 splitSpaces: false}
   lineView.measure = {}
 
   // Iterate over the logical lines that make up this visual line.
